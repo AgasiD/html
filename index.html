@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a><img src="images/JSlogo.png" /> </a>
+        </div>
+        <label id="menuIcon" for="check"><img src="menu.svg" />
+        </label>
+        <input type="checkbox" id="check" />
+        <nav>
+            <ul>
+                <li><a id="navInicio" onclick="setActive('navInicio', 'inicio')" href="#section1">Inicio</a></li>
+                <li><a id="navTienda" onclick="setActive('navTienda', 'tienda')" href="#section2">Servicios</a></li>
+                <li><a id="navContacto" onclick="setActive('navContacto', 'contacto')" href="#section3">Contacto</a></li>
+                <li><a id="navSobre" onclick="setActive('navSobre', 'sobre')" href="#section4">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <ul id="social-media">
+        <li><a href="https://facebook.com" target="_blank"><img src="images/icons/svg/006-facebook.svg"/><span>facebook</span></a></li>
+        <li><a href="https://linkedin.com" target="_blank"><img src="images/icons/svg/004-linkedin.svg"/><span>linkedin</span></a></li>
+        <li><a href="https://twitter.com" target="_blank"><img src="images/icons/svg/003-twitter.svg"/><span>twitter</span></a></li>
+        <li><a href="https://mercadolibre.com.ar" target="_blank"><img src="images/icons/ml.png" /><span>mercado libre</span></a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=5491158793844&text=Hola" target="_blank">  <img src="images/icons/svg/002-whatsapp.svg"/><span>whatsapp</span></a></li>
+        <li><a href="https://google.com.ar" target="_blank"><img src="images/icons/svg/001-google-plus.svg"/><span>google</span></a></li>
+        <li><a href="https://youtube.com" target="_blank"><img src="images/icons/svg/005-youtube.svg"/><span>youtube</span></a></li>
+
+    </ul>
+
+
+    <section id="section1" onclick="changeBanner()" style="background-image: url(images/banner-BG2.jpg)">
+
+        <article>
+            <h1 class="out-article">Titulo inicial</h1>
+            <p class="out-article">
+                Lorem ipsum dolor sit amet, consectetur adipipurus quis consectetur.
+                Suspendisse euismod tincidunt commodo. Integer felis quam, lobortis
+                a molestie eu, dapibus id dolor. Morbi pellentesque pretium mauris
+            </p>
+            <button>Button 1</button>
+            <button>Button 2</button>
+        </article>
+    </section>
+
+    <section id="section2">
+        <h2>¿QUE OFRECEMOS?</h2>
+        <p>
+            Nuestro constante esfuerzo por atender las 
+            demandas del mercado y la de nuestros clientes,
+             la profesionalidad del equipo técnico, de 
+             diseño y programación nos posiciono como una
+              de las empresas de referencia en el mercado.
+        </p>
+
+        <div id="imgs">
+            <div><img id="img1" class=" achicar  " src="images/icons/svg/solution.svg" />
+                <hr />
+                <p class="out" id="parrafo1">
+                    Soluciones informáticas empresariales a medida
+                </p>
+            </div>
+            <div><img id="img2" class=" achicar    d-2" src="images/icons/svg/tools.svg">
+                <hr />      
+                <p class="out" id="parrafo2">
+                    Servicio técnico remoto y presencial
+                                </p>
+            </div>
+            <div><img id="img3" class=" achicar  d-3" src="images/icons/svg/sale.svg" />
+                <hr />
+                <p class="out" id="parrafo3">
+                    Venta de insumos informáticos
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section3">
+        <article>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipipurus quis consectetur. Suspendisse euismod tincidunt
+                commodo. Integer felis quam, lobortis a molestie eu, dapibus id dolor. Morbi pellentesque pretium mauris
+            </p>
+        </article>
+        <img src="images/MKT.png" width="500px" />
+
+    </section>
+
+    <div class="center">
+        <div class="rings"></div>
+        <span>Cargando...</span>
+    </div>
+
+    <section id="section4">
+        <h2>Conozcamos un poco...</h2>
+
+        <div id="galeria">
+            <img id="company-img" alt="companyimg" src="images/servicios.gif" />
+            <div>
+                <p>
+                    Just Solution inicia sus actividades en 1991 como empresa de soluciones informáticas, desarrollando
+                    software a medida para empresas, tanto a nivel nacional como internacional.
+                    Nuestro constante esfuerzo por atender las demandas del mercado y la de nuestros clientes, la
+                    profesionalidad del equipo técnico, de diseño y programación nos posiciono como una de las empresas
+                    de
+                    referencia en el mercado.
+                    El esfuerzo por mantenernos en constante evolución, y el aval de 15 años de experiencia dan como
+                    resultado la continua ampliación de nuestros servicios, entre los que destacan:
+
+                <ul>
+                    <li style="transform: translate(200%)" id="lii1">Venta de hardware e insumos</li>
+                    <li style="transform: translate(200%)" id="lii2">Servicio técnico on site</li>
+                    <li style="transform: translate(200%)" id="lii4">Préstamo de equipos en casos críticos</li>
+                    <li style="transform: translate(200%)" id="lii5">Logística</li>
+                    <li style="transform: translate(200%)" id="lii6">Help Desk</li>
+                </ul>
+                </p>
+            </div>
+    </section>
+    </div>
+
+    <footer>
+        <div id="contacto">
+            <div id="telefonos">
+                <img class="icon" src="images/icons/svg/phone1.svg" />
+                <ul>
+                    <li>
+                        (011) 4641 - 9005
+                    </li>
+                    <li>
+                        (011) 4641 - 9005
+                    </li>
+                </ul>
+            </div>
+            <div id="movil">
+                <img class="icon" src="images/icons/svg/phone.svg" />
+                <ul>
+                    <li>
+                        11 - 6658- 4411
+                    </li>
+                </ul>
+            </div>
+            <div id="horarios">
+                <img class="icon" src="images/icons/svg/clock.svg" />
+                <ul>
+                    <li>
+                        Lun a Vie 8:00hs - 17:00hs
+                    </li>
+                    <li>
+                        sab y dom <u>cerrado</u>
+
+                    </li>
+                </ul>
+            </div>
+            <div id="location">
+                <img class="icon" src="images/icons/svg/location.svg" />
+                <ul>
+                    <li>
+                        Virrey Cisneros 73
+                    </li>
+                    <li>
+                        Lomas de Zamora - La Matanza
+                    </li>
+                    <li>
+                        Buenos Aires
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <iframe class="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3281.954387174646!2d-58.54906854813232!3d-34.655854847905665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3cd964c892ffbd65!2sjust%20solution!5e0!3m2!1ses-419!2sar!4v1589555201354!5m2!1ses-419!2sar"
+            width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+        <!--
+        <div id="form">
+            <h2> Contactanos</h2>
+            <input type="text" placeholder="Nombre y apellido"> 
+            <input type="text" placeholder="Asunto"> 
+            <input type="email" placeholder="E-mail de contacto"> 
+            <input type="number" placeholder="Teléfono de contacto"> 
+            <textarea placeholder="Hola! Quisiera saber..." rows="10"></textarea>
+            <button>Enviar</button>
+        </div>
+        -->
+        <div style="display:none">
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+                    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
+                    perfect</a> from
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
