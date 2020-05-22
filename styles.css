@@ -1,1073 +1,1103 @@
-                                                                        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Quicksand:wght@300&display=swap');
-                                                                    @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap');
-                                                                    @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-                                                                    @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
-                                                                     :root {
-                                                                        --main-Color: #162447;
-                                                                        --secondary-color: #1f4068;
-                                                                        --tertary-color: #1b1b2f;
-                                                                        --quartet-color: #0e76a8;
-                                                                        --main-font-Color: #a3cad6;
-                                                                        --title-font-color: #e43f5a;
-                                                                        --secondary-font-Color: #a3cad6;
-                                                                    }
-                                                                    /* #    rgb(252, 238, 212);;*/
-                                                                    
-                                                                    * {
-                                                                        transition: all 0.5s;
-                                                                        font-family: 'Quicksand', sans-serif;
-                                                                        color: var(--main-font-Color);
-                                                                    }
-                                                                    
-                                                                    h1,
-                                                                    h2 {
-                                                                        font-size: 35px;
-                                                                    }
-                                                                    
-                                                                    h1,
-                                                                    h2,
-                                                                    h3,
-                                                                    h4,
-                                                                    h5 {
-                                                                        font-family: 'Chelsea Market', cursive;
-                                                                        color: var(--title-font-color)
-                                                                    }
-                                                                    
-                                                                    html {
-                                                                        scroll-behavior: smooth;
-                                                                    }
-                                                                    
-                                                                    body {
-                                                                        margin: 0;
-                                                                    }
-                                                                    
-                                                                    body::-webkit-scrollbar {
-                                                                        display: none;
-                                                                    }
-                                                                    
-                                                                    a {
-                                                                        text-decoration: none;
-                                                                    }
-                                                                    
-                                                                    header {
-                                                                        background-color: var(--tertary-color);
-                                                                        display: flex;
-                                                                        position: fixed;
-                                                                        width: 100%;
-                                                                        box-shadow: 1px 1px 25px 2px black;
-                                                                        z-index: 10;
-                                                                        animation: fadeIn .5s linear;
-                                                                    }
-                                                                    
-                                                                    @keyframes fadeIn {
-                                                                        from {
-                                                                            opacity: 0;
-                                                                        }
-                                                                        to {
-                                                                            opacity: 1;
-                                                                        }
-                                                                    }
-                                                                    
-                                                                    header #logo {
-                                                                        flex-basis: 50%;
-                                                                        margin-left: 20px;
-                                                                    }
-                                                                    
-                                                                    header a img {
-                                                                        cursor: pointer;
-                                                                        padding: 5px;
-                                                                        width: 60px;
-                                                                        margin-left: 30px;
-                                                                    }
-                                                                    
-                                                                    nav {
-                                                                        justify-self: end;
-                                                                    }
-                                                                    
-                                                                    nav ul {
-                                                                        text-align: center;
-                                                                        padding-inline-start: 0px;
-                                                                        display: flex;
-                                                                        list-style: none;
-                                                                        padding: 0;
-                                                                    }
-                                                                    
-                                                                    nav ul li {
-                                                                        cursor: pointer;
-                                                                        padding: 0;
-                                                                        margin: 10px 5px 0px 5px;
-                                                                        z-index: 1;
-                                                                    }
-                                                                    
-                                                                    nav ul li a {
-                                                                        align-self: center;
-                                                                        border-radius: 5px;
-                                                                        transition: 0.35s;
-                                                                        cursor: pointer;
-                                                                        padding: 10px;
-                                                                        color: var(--main-font-Color);
-                                                                        ;
-                                                                        letter-spacing: 2px;
-                                                                    }
-                                                                    
-                                                                    nav ul li a:hover {
-                                                                        background-color: var(--main-Color);
-                                                                    }
-                                                                    
-                                                                    .achicar {
-                                                                        transform: scale(0, 0);
-                                                                    }
-                                                                    
-                                                                    .visible {
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    nav ul li:nth-child(1) {
-                                                                        min-width: 100px;
-                                                                    }
-                                                                    
-                                                                    nav ul li:nth-child(2) {
-                                                                        width: 100px;
-                                                                    }
-                                                                    
-                                                                    nav ul li:nth-child(3) {
-                                                                        min-width: 100px;
-                                                                    }
-                                                                    
-                                                                    nav ul li:nth-child(4) {
-                                                                        min-width: 150px;
-                                                                    }
-                                                                    
-                                                                    nav ul li:nth-child(2):hover~.bg-hover {
-                                                                        left: calc(50% + 120px);
-                                                                    }
-                                                                    
-                                                                    nav ul li:nth-child(3):hover~.bg-hover {
-                                                                        left: calc(50% + 240px);
-                                                                    }
-                                                                    
-                                                                    nav ul li:nth-child(4):hover~.bg-hover {
-                                                                        left: calc(50% + 360px);
-                                                                        width: 160px;
-                                                                    }
-                                                                    
-                                                                    .inicio {
-                                                                        left: calc(50%);
-                                                                    }
-                                                                    
-                                                                    .tienda {
-                                                                        left: calc(50% + 120px);
-                                                                    }
-                                                                    
-                                                                    .contacto {
-                                                                        left: calc(50% + 240px);
-                                                                    }
-                                                                    
-                                                                    .sobre {
-                                                                        left: calc(50% + 360px);
-                                                                        width: 160px;
-                                                                    }
-                                                                    
-                                                                    nav ul a:hover,
-                                                                    .active {
-                                                                        background-color: var(--main-Color);
-                                                                        border-radius: 8px;
-                                                                    }
-                                                                    
-                                                                    .active a {
-                                                                        color: #888888;
-                                                                    }
-                                                                    
-                                                                    #check,
-                                                                    #menuIcon {
-                                                                        display: none;
-                                                                    }
-                                                                    
-                                                                    section {
-                                                                        min-height: 800px;
-                                                                        overflow: hidden;
-                                                                    }
-                                                                    
-                                                                    section p {
-                                                                        font-size: 20px;
-                                                                    }
-                                                                    /*          ===========================================SECTION 1 */
-                                                                    
-                                                                    #section1 {
-                                                                        padding-top: 75px;
-                                                                        background-repeat: no-repeat;
-                                                                        background-size: 100% 100%;
-                                                                        display: flex;
-                                                                        background-attachment: fixed;
-                                                                    }
-                                                                    
-                                                                    #section1 article {
-                                                                        flex-basis: 35%;
-                                                                        line-height: 40px;
-                                                                        text-align: center;
-                                                                        margin-top: 100px;
-                                                                    }
-                                                                    
-                                                                    @keyframes entrar {
-                                                                        from {
-                                                                            left: -100%
-                                                                        }
-                                                                        to {
-                                                                            left: 0%;
-                                                                        }
-                                                                    }
-                                                                    
-                                                                    #section1 article h1,
-                                                                    #section1 article p {
-                                                                        position: relative;
-                                                                        margin-left: 100px;
-                                                                        animation: entrar1 1s ease;
-                                                                    }
-                                                                    
-                                                                    #section1 article h1 {
-                                                                        font-size: 25px;
-                                                                        color: #ffff !important;
-                                                                    }
-                                                                    
-                                                                    #section1 article p {
-                                                                        background-color: rgba(0, 0, 0, 0.2);
-                                                                        color: rgb(218, 218, 218) !important;
-                                                                    }
-                                                                    
-                                                                    #section1 article button,
-                                                                    #form button {
-                                                                        position: relative;
-                                                                        width: 25%;
-                                                                        height: 50px;
-                                                                        cursor: pointer;
-                                                                        outline: none;
-                                                                        border: none;
-                                                                        border-radius: 10px;
-                                                                        margin: 50px 15px 0px 15px;
-                                                                        animation: entrar1 1s ease;
-                                                                    }
-                                                                    
-                                                                    #section1 article button:hover,
-                                                                    #form button:hover {
-                                                                        background-color: var(--main-Color);
-                                                                        box-shadow: 0px 0px 10px 10px var(--main-Color);
-                                                                    }
-                                                                    
-                                                                    #section1 article button:active,
-                                                                    #form button:active {
-                                                                        transition: 0.1s;
-                                                                        background-color: var(--main-Color);
-                                                                        box-shadow: 0px 0px 10px 10px #888888;
-                                                                    }
-                                                                    
-                                                                    @keyframes entrar1 {
-                                                                        from {
-                                                                            transform: translate(-100%);
-                                                                        }
-                                                                        to {
-                                                                            transform: translate(0%);
-                                                                        }
-                                                                    }
-                                                                    
-                                                                    @keyframes escritura {
-                                                                        from {
-                                                                            width: 0%;
-                                                                        }
-                                                                        to {
-                                                                            width: 100%;
-                                                                        }
-                                                                    }
-                                                                    /*          ===========================================SECTION 2 */
-                                                                    
-                                                                    #section2 {
-                                                                        background-color: var(--secondary-color);
-                                                                        display: flex;
-                                                                        align-items: center;
-                                                                        flex-direction: column;
-                                                                        justify-content: center;
-                                                                        color: var(--secondary-font-Color);
-                                                                    }
-                                                                    
-                                                                    #section3 h1,
-                                                                    #section3 h2,
-                                                                    #section5 h2 {
-                                                                        color: var(--title-font-color);
-                                                                    }
-                                                                    
-                                                                    #section2 p {
-                                                                        width: 50%;
-                                                                        line-height: 35px;
-                                                                        text-align: center;
-                                                                        color: var(--secondary-font-Color);
-                                                                        font-weight: bold;
-                                                                    }
-                                                                    
-                                                                    #imgs {
-                                                                        margin-top: 100px;
-                                                                        width: 100%;
-                                                                        display: flex;
-                                                                        justify-content: space-around;
-                                                                    }
-                                                                    
-                                                                    #imgs div {
-                                                                        width: 30%;
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        text-align: center;
-                                                                        flex-direction: column;
-                                                                        align-items: center;
-                                                                        overflow: hidden;
-                                                                        color: var(--secondary-font-Color);
-                                                                    }
-                                                                    
-                                                                    #imgs div img {
-                                                                        cursor: pointer;
-                                                                        width: 150px;
-                                                                    }
-                                                                    
-                                                                    #imgs div img:hover {
-                                                                        transition: all .5s;
-                                                                        display: block;
-                                                                        width: 150px;
-                                                                    }
-                                                                    
-                                                                    #imgs div:nth-child(1) img {
-                                                                        content: url("./images/icons/svg/ventasColor.svg");
-                                                                        transition: filter .1s;
-                                                                        filter: grayscale(100%);
-                                                                    }
-                                                                    
-                                                                    #imgs div:nth-child(1) img:hover {
-                                                                        filter: none;
-                                                                    }
-                                                                    
-                                                                    #imgs div:nth-child(2) img {
-                                                                        content: url("./images/icons/svg/customerColor.svg");
-                                                                        transition: filter .1s;
-                                                                        filter: grayscale(100%);
-                                                                    }
-                                                                    
-                                                                    #imgs div:nth-child(2) img:hover {
-                                                                        filter: none;
-                                                                    }
-                                                                    
-                                                                    #imgs div:nth-child(3) img {
-                                                                        content: url("./images/icons/svg/targetColor.svg");
-                                                                        transition: filter .1s;
-                                                                        filter: grayscale(100%);
-                                                                    }
-                                                                    
-                                                                    #imgs div:nth-child(3) img:hover {
-                                                                        filter: none;
-                                                                    }
-                                                                    
-                                                                    #imgs div img:hover {}
-                                                                    
-                                                                    #imgs div hr {
-                                                                        margin-top: 30px;
-                                                                        border: var(--main-Color) solid 1px;
-                                                                        border-radius: 8px;
-                                                                        width: 90%;
-                                                                    }
-                                                                    
-                                                                    #imgs div p {
-                                                                        color: var(--title-font-color);
-                                                                        overflow: hidden;
-                                                                        position: relative;
-                                                                        max-width: 100%;
-                                                                        transition: all 1s;
-                                                                        line-height: 35px;
-                                                                        font-weight: bold;
-                                                                        font-size: 25px;
-                                                                    }
-                                                                    
-                                                                    #imgs div:hover p {
-                                                                        top: 0%;
-                                                                        opacity: 1;
-                                                                    }
-                                                                    
-                                                                    .out {
-                                                                        transform: translateY(700px);
-                                                                    }
-                                                                    
-                                                                    @keyframes crecer {
-                                                                        from {
-                                                                            transform: scale(0, 0);
-                                                                        }
-                                                                        to {
-                                                                            transform: scale(1, 1);
-                                                                        }
-                                                                    }
-                                                                    
-                                                                    @keyframes imgEntrada2 {
-                                                                        from {
-                                                                            transform: scale(0, 0);
-                                                                        }
-                                                                        to {
-                                                                            transform: scale(1, 1);
-                                                                        }
-                                                                    }
-                                                                    /*          ===========================================SECTION 3 */
-                                                                    
-                                                                    #section3 {
-                                                                        padding: 50px;
-                                                                        background-color: var(--main-Color);
-                                                                        display: flex;
-                                                                        flex-direction: column;
-                                                                        align-items: center;
-                                                                    }
-                                                                    
-                                                                    #section3 article {
-                                                                        line-height: 35px;
-                                                                        text-align: center;
-                                                                        justify-content: space-evenly;
-                                                                        align-items: center;
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                    }
-                                                                    
-                                                                    #section3 article p {
-                                                                        text-align: center;
-                                                                        max-width: 30%;
-                                                                    }
-                                                                    
-                                                                    #section3 img {
-                                                                        height: 350px;
-                                                                        border-radius: 50%;
-                                                                        position: relative;
-                                                                        /*  animation-name: imgEntrada;
-    animation-duration: 1s;*/
-                                                                    }
-                                                                    /*=====================================SECTION 4/**/
-                                                                    
-                                                                    #section4 {
-                                                                        text-align: center;
-                                                                        background-color: var(--secondary-color);
-                                                                        flex-direction: column;
-                                                                        align-items: center;
-                                                                        color: var(--secondary-font-Color);
-                                                                    }
-                                                                    
-                                                                    #section4 h2 {
-                                                                        text-transform: capitalize;
-                                                                    }
-                                                                    
-                                                                    #section4 {
-                                                                        text-align: center;
-                                                                    }
-                                                                    
-                                                                    #section4 #cards {
-                                                                        margin-top: 70px;
-                                                                        display: flex;
-                                                                        flex-direction: row;
-                                                                        justify-content: space-evenly;
-                                                                    }
-                                                                    
-                                                                    #section4>p {
-                                                                        margin: 0px auto;
-                                                                        line-height: 35px;
-                                                                        width: 70%;
-                                                                    }
-                                                                    
-                                                                    #section4 .card {
-                                                                        cursor: pointer;
-                                                                        transition: 1s;
-                                                                        text-align: center;
-                                                                        border-radius: 10px;
-                                                                        width: 250px;
-                                                                        max-height: 185;
-                                                                        overflow: hidden;
-                                                                    }
-                                                                    
-                                                                    #section4 .card p {
-                                                                        z-index: 1;
-                                                                        transition: all 0.5s;
-                                                                        opacity: 0;
-                                                                    }
-                                                                    
-                                                                    #section4 .card:hover {
-                                                                        max-height: 185px;
-                                                                        max-height: 1000px;
-                                                                    }
-                                                                    
-                                                                    #section4 .card:hover img {
-                                                                        filter: none;
-                                                                    }
-                                                                    
-                                                                    #section4 .card:hover p {
-                                                                        opacity: 1;
-                                                                    }
-                                                                    
-                                                                    #section4 .card img {
-                                                                        padding: 10px;
-                                                                        max-height: 100px;
-                                                                        max-width: 100px;
-                                                                    }
-                                                                    
-                                                                    #section4 .card hr {
-                                                                        width: 90%;
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria {
-                                                                        color: var(--secondary-font-Color);
-                                                                        display: flex;
-                                                                        flex-wrap: wrap;
-                                                                        flex-direction: row;
-                                                                        justify-content: space-around;
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria img {
-                                                                        transition: all .5s;
-                                                                        align-self: center;
-                                                                        height: 200px;
-                                                                        max-height: 300px;
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div {
-                                                                        line-height: 40px;
-                                                                        max-width: 40%;
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div p {
-                                                                        color: var(--secondary-font-Color);
-                                                                        font-weight: bold;
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div ul {
-                                                                        counter-reset: index;
-                                                                        list-style-image: url('images/icons/svg/addpng.png');
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div li {
-                                                                        line-height: 45px;
-                                                                        cursor: pointer;
-                                                                        transition: all 0.5s;
-                                                                        font-weight: bold;
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div li:nth-child(2) {
-                                                                        transform: translate(-5%);
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div li:nth-child(3) {
-                                                                        transform: translate(20%);
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div li:nth-child(4) {
-                                                                        transform: translate(30%);
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div li:nth-child(5) {
-                                                                        transform: translate(40%);
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div li:nth-child(6) {
-                                                                        transform: translate(50%);
-                                                                    }
-                                                                    
-                                                                    #section4 #galeria div li span {
-                                                                        color: var(--secondary-font-Color);
-                                                                        font-weight: bold;
-                                                                        margin-left: 50px;
-                                                                    }
-                                                                    /*
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Roboto+Condensed:ital,wght@1,700&family=Source+Sans+Pro:ital,wght@0,600;1,900&display=swap');
+:root {
+--main-Color: #162447;
+--secondary-color: #1f4068;
+--tertary-color: #1b1b2f;
+--quartet-color: #0e76a8;
+--main-font-Color: #a3cad6;
+--title-font-color: #e43f5a;
+--secondary-font-Color: #a3cad6;
+}
+/* #    rgb(252, 238, 212);;*/
+
+* {
+transition: all 0.5s;
+font-family: 'Quicksand', sans-serif;
+font-weight: bold;
+color: var(--main-font-Color);
+}
+
+h1,
+h2 {
+font-size: 35px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Source Sans Pro', sans-serif;/*font-family: 'Roboto Condensed', sans-serif;/*font-family: 'Bebas Neue', cursive;/*font-family: 'Archivo Black', sans-serif;*/
+    color: var(--title-font-color)
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+}
+
+body::-webkit-scrollbar {
+display: none;
+}
+
+a {
+text-decoration: none;
+}
+
+header {
+background-color: var(--tertary-color);
+display: flex;
+position: fixed;
+width: 100%;
+box-shadow: 1px 1px 25px 2px black;
+z-index: 10;
+animation: fadeIn .5s linear;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+header #logo {
+flex-basis: 50%;
+margin-left: 20px;
+}
+
+header a img {
+cursor: pointer;
+padding: 5px;
+width: 60px;
+margin-left: 30px;
+}
+
+nav {
+justify-self: end;
+}
+
+nav ul {
+text-align: center;
+padding-inline-start: 0px;
+display: flex;
+list-style: none;
+padding: 0;
+}
+
+nav ul li {
+cursor: pointer;
+padding: 0;
+margin: 10px 5px 0px 5px;
+z-index: 1;
+}
+
+nav ul li a {
+align-self: center;
+border-radius: 5px;
+transition: 0.35s;
+cursor: pointer;
+padding: 10px;
+color: var(--main-font-Color);
+;
+letter-spacing: 2px;
+}
+
+nav ul li a:hover {
+background-color: var(--main-Color);
+}
+
+.achicar {
+transform: scale(0, 0);
+}
+
+.visible {
+display: block;
+}
+
+nav ul li:nth-child(1) {
+min-width: 100px;
+}
+
+nav ul li:nth-child(2) {
+width: 100px;
+}
+
+nav ul li:nth-child(3) {
+min-width: 100px;
+}
+
+nav ul li:nth-child(4) {
+min-width: 150px;
+}
+
+nav ul li:nth-child(2):hover~.bg-hover {
+left: calc(50% + 120px);
+}
+
+nav ul li:nth-child(3):hover~.bg-hover {
+left: calc(50% + 240px);
+}
+
+nav ul li:nth-child(4):hover~.bg-hover {
+left: calc(50% + 360px);
+width: 160px;
+}
+
+.inicio {
+left: calc(50%);
+}
+
+.tienda {
+left: calc(50% + 120px);
+}
+
+.contacto {
+left: calc(50% + 240px);
+}
+
+.sobre {
+left: calc(50% + 360px);
+width: 160px;
+}
+
+nav ul a:hover,
+.active {
+background-color: var(--main-Color);
+border-radius: 8px;
+}
+
+.active a {
+color: #888888;
+}
+
+#check,
+#menuIcon {
+display: none;
+}
+
+section {
+min-height: 800px;
+overflow: hidden;
+}
+
+section p {
+font-size: 20px;
+}
+/*          ===========================================SECTION 1 */
+
+#section1 {
+    padding-top: 45px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+}
+
+#section1 article {
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+        text-align: center;
+}
+#section1 div{
+    width: 100%;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes entrar {
+from {
+left: -100%
+}
+to {
+left: 0%;
+}
+}
+#section1 article p {
+
+}
+
+#section1 article h1,
+#section1 article p {
+position: relative;
+text-align: center;
+width: 30%;
+animation: entrar1 1s ease;
+}
+
+#section1 article h1 {
+font-size: 45px;
+color: var(--title-font-color) !important;
+}
+
+#section1 article p {
+color: rgb(218, 218, 218) !important;
+}
+
+#section1 article button,
+#form button {
+position: relative;
+width: 25%;
+height: 50px;
+cursor: pointer;
+outline: none;
+border: none;
+border-radius: 10px;
+margin: 50px 15px 0px 15px;
+animation: entrar1 1s ease;
+}
+
+#section1 article button:hover,
+#form button:hover {
+background-color: var(--main-Color);
+box-shadow: 0px 0px 10px 10px var(--main-Color);
+}
+
+#section1 article button:active,
+#form button:active {
+transition: 0.1s;
+background-color: var(--main-Color);
+box-shadow: 0px 0px 10px 10px #888888;
+}
+
+@keyframes entrar1 {
+from {
+transform: translate(-100%);
+}
+to {
+transform: translate(0%);
+}
+}
+
+@keyframes escritura {
+from {
+width: 0%;
+}
+to {
+width: 100%;
+}
+}
+/*          ===========================================SECTION 2 */
+
+#section2 {
+background-color: var(--secondary-color);
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+color: var(--secondary-font-Color);
+}
+
+#section3 h1,
+#section3 h2,
+#section5 h2 {
+color: var(--title-font-color);
+}
+
+#section2 p {
+width: 50%;
+line-height: 35px;
+text-align: center;
+color: var(--secondary-font-Color);
+font-weight: bold;
+}
+
+#imgs {
+margin-top: 100px;
+width: 100%;
+display: flex;
+justify-content: space-around;
+}
+
+#imgs div {
+width: 30%;
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+flex-direction: column;
+align-items: center;
+overflow: hidden;
+color: var(--secondary-font-Color);
+}
+
+#imgs div img {
+cursor: pointer;
+width: 150px;
+}
+
+#imgs div img:hover {
+transition: all .5s;
+display: block;
+width: 150px;
+}
+
+#imgs div:nth-child(1) img {
+content: url("./images/icons/svg/ventasColor.svg");
+transition: filter .1s;
+filter: grayscale(100%);
+}
+
+#imgs div:nth-child(1) img:hover {
+filter: none;
+}
+
+#imgs div:nth-child(2) img {
+content: url("./images/icons/svg/customerColor.svg");
+transition: filter .1s;
+filter: grayscale(100%);
+}
+
+#imgs div:nth-child(2) img:hover {
+filter: none;
+}
+
+#imgs div:nth-child(3) img {
+content: url("./images/icons/svg/targetColor.svg");
+transition: filter .1s;
+filter: grayscale(100%);
+}
+
+#imgs div:nth-child(3) img:hover {
+filter: none;
+}
+
+#imgs div img:hover {}
+
+#imgs div hr {
+margin-top: 30px;
+border: var(--main-Color) solid 1px;
+border-radius: 8px;
+width: 90%;
+}
+
+#imgs div p {
+color: var(--title-font-color);
+overflow: hidden;
+position: relative;
+max-width: 100%;
+transition: all 1s;
+line-height: 35px;
+font-weight: bold;
+font-size: 25px;
+}
+
+#imgs div:hover p {
+top: 0%;
+opacity: 1;
+}
+
+.out {
+transform: translateY(700px);
+}
+
+@keyframes crecer {
+from {
+transform: scale(0, 0);
+}
+to {
+transform: scale(1, 1);
+}
+}
+
+@keyframes imgEntrada2 {
+from {
+transform: scale(0, 0);
+}
+to {
+transform: scale(1, 1);
+}
+}
+/*          ===========================================SECTION 3 */
+
+#section3 {
+padding: 50px;
+background-color: var(--main-Color);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#section3 article {
+line-height: 35px;
+text-align: center;
+justify-content: space-evenly;
+align-items: center;
+display: flex;
+flex-wrap: wrap;
+}
+
+#section3 article p {
+text-align: center;
+max-width: 30%;
+}
+
+#section3 img {
+height: 350px;
+border-radius: 50%;
+position: relative;
+/*  animation-name: imgEntrada;
+animation-duration: 1s;*/
+}
+/*=====================================SECTION 4/**/
+
+#section4 {
+text-align: center;
+background-color: var(--secondary-color);
+flex-direction: column;
+align-items: center;
+color: var(--secondary-font-Color);
+}
+
+#section4 h2 {
+text-transform: capitalize;
+}
+
+#section4 {
+text-align: center;
+}
+
+#section4 #cards {
+margin-top: 70px;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+#section4>p {
+margin: 0px auto;
+line-height: 35px;
+width: 70%;
+}
+
+#section4 .card {
+cursor: pointer;
+transition: 1s;
+text-align: center;
+border-radius: 10px;
+width: 250px;
+max-height: 185;
+overflow: hidden;
+}
+
+#section4 .card p {
+z-index: 1;
+transition: all 0.5s;
+opacity: 0;
+}
+
+#section4 .card:hover {
+max-height: 185px;
+max-height: 1000px;
+}
+
+#section4 .card:hover img {
+filter: none;
+}
+
+#section4 .card:hover p {
+opacity: 1;
+}
+
+#section4 .card img {
+padding: 10px;
+max-height: 100px;
+max-width: 100px;
+}
+
+#section4 .card hr {
+width: 90%;
+}
+
+#section4 #galeria {
+color: var(--secondary-font-Color);
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-around;
+}
+
+#section4 #galeria img {
+transition: all .5s;
+align-self: center;
+height: 200px;
+max-height: 300px;
+}
+
+#section4 #galeria div {
+line-height: 40px;
+max-width: 40%;
+}
+
+#section4 #galeria div p {
+color: var(--secondary-font-Color);
+font-weight: bold;
+}
+
+#section4 #galeria div ul {
+counter-reset: index;
+list-style-image: url('images/icons/svg/addpng.png');
+}
+
+#section4 #galeria div li {
+line-height: 45px;
+cursor: pointer;
+transition: all 0.5s;
+font-weight: bold;
+}
+
+#section4 #galeria div li:nth-child(2) {
+transform: translate(-5%);
+}
+
+#section4 #galeria div li:nth-child(3) {
+transform: translate(20%);
+}
+
+#section4 #galeria div li:nth-child(4) {
+transform: translate(30%);
+}
+
+#section4 #galeria div li:nth-child(5) {
+transform: translate(40%);
+}
+
+#section4 #galeria div li:nth-child(6) {
+transform: translate(50%);
+}
+
+#section4 #galeria div li span {
+color: var(--secondary-font-Color);
+font-weight: bold;
+margin-left: 50px;
+}
+/*
 #section4 #galeria div li:before{
 
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    counter-increment: index;                   /* Increment the value of section counter by 1 
-    content: url(images/icons/svg/ads.svg);
-    margin-right: 10px;
-    color: var(--main-Color);
+width: 10px;
+height: 10px;
+border-radius: 50%;
+counter-increment: index;                   /* Increment the value of section counter by 1 
+content: url(images/icons/svg/ads.svg);
+margin-right: 10px;
+color: var(--main-Color);
 }
 */
-                                                                    
-                                                                    .out-right {
-                                                                        transform: translate(200%);
-                                                                    }
-                                                                    
-                                                                    .out-left {
-                                                                        transform: translate(-200%);
-                                                                    }
-                                                                    
-                                                                    #section5 {
-                                                                        min-height: 800px;
-                                                                        background-color: var(--main-Color);
-                                                                        text-align: center;
-                                                                        display: block;
-                                                                    }
-                                                                    
-                                                                    #section5 p {
-                                                                        margin: 0px auto;
-                                                                        line-height: 35px;
-                                                                        width: calc(50% + (155px));
-                                                                        margin-top: 30px;
-                                                                    }
-                                                                    
-                                                                    #steps {
-                                                                        margin-top: 70px;
-                                                                        counter-reset: steps;
-                                                                        margin-left: 20%;
-                                                                        margin-right: 20%;
-                                                                    }
-                                                                    
-                                                                    #steps div {
-                                                                        padding: 0px auto;
-                                                                    }
-                                                                    
-                                                                    #steps hr {
-                                                                        /*width: calc(100% - 10% - 50px);*/
-                                                                        top: 25px;
-                                                                        margin: 0;
-                                                                        margin-left: 67px;
-                                                                        position: relative;
-                                                                        z-index: 0;
-                                                                        transition: width 3s linear;
-                                                                        border-color: var(--title-font-color)
-                                                                        /*animation-name: crecer;
-    animation-duration: 3s;
-    animation-timing-function: linear;*/
-                                                                    }
-                                                                    
-                                                                    #steps ul {
-                                                                        padding-inline-start: 0px;
-                                                                        list-style: none;
-                                                                        display: flex;
-                                                                    }
-                                                                    
-                                                                    #steps li {
-                                                                        display: inline;
-                                                                        margin: 0px 14% 0px 14%;
-                                                                        z-index: 1;
-                                                                        color: var(--title-font-color);
-                                                                        transform: all .3s;
-                                                                    }
-                                                                    
-                                                                    #steps li:nth-child(1) {
-                                                                        margin: 0px 10% 0px 0%;
-                                                                        z-index: 1;
-                                                                    }
-                                                                    
-                                                                    #steps li:nth-child(2) {}
-                                                                    
-                                                                    #steps li:nth-child(3) {}
-                                                                    
-                                                                    #steps li:nth-child(4) {
-                                                                        margin: 0px 0% 0px 10%;
-                                                                        z-index: 1;
-                                                                        color: white;
-                                                                    }
-                                                                    
-                                                                    #steps li:before {
-                                                                        background-color: var(--tertary-color);
-                                                                        color: var(--title-font-color);
-                                                                        border: 2px solid;
-                                                                        z-index: 1;
-                                                                        content: counter(steps);
-                                                                        counter-increment: steps;
-                                                                        padding: 25px 30px 25px 30px;
-                                                                        border-radius: 50%;
-                                                                        height: 30px;
-                                                                        width: 50px;
-                                                                    }
-                                                                    
-                                                                    #steps li::after {
-                                                                        color: var(--title-font-color);
-                                                                        display: block;
-                                                                        width: 50px;
-                                                                        text-align: center;
-                                                                        margin-top: 30px;
-                                                                        font-weight: bold;
-                                                                    }
-                                                                    
-                                                                    #steps li:nth-child(1):after {
-                                                                        content: 'Diagnóstico';
-                                                                    }
-                                                                    
-                                                                    #steps li:nth-child(2):after {
-                                                                        content: 'Objetivos';
-                                                                    }
-                                                                    
-                                                                    #steps li:nth-child(3):after {
-                                                                        content: 'Planificación';
-                                                                    }
-                                                                    
-                                                                    #steps li:nth-child(4):after {
-                                                                        content: 'Ejecución';
-                                                                    }
-                                                                    /*------------------------------------------------ our-customers */
-                                                                    
-                                                                    #our-customers {
-                                                                        min-height: 175px;
-                                                                        background-image: url('./images/customers/bg2.png');
-                                                                        background-blend-mode: difference;
-                                                                        background-attachment: fixed;
-                                                                    }
-                                                                    
-                                                                    #our-customers div {
-                                                                        overflow-x: scroll;
-                                                                        scroll-behavior: smooth;
-                                                                        display: flex;
-                                                                        flex-direction: row;
-                                                                        justify-content: space-around;
-                                                                        align-items: center;
-                                                                        backdrop-filter: blur(5px);
-                                                                        min-height: 175px;
-                                                                        background-color: rgba(255, 255, 255, 0.6);
-                                                                    }
-                                                                    
-                                                                    #our-customers div::-webkit-scrollbar {
-                                                                        display: none;
-                                                                    }
-                                                                    
-                                                                    #our-customers div img {
-                                                                        filter: grayscale(1);
-                                                                        margin: 0px 45px 0px 45px;
-                                                                    }
-                                                                    
-                                                                    #our-customers div img:hover {
-                                                                        filter: none;
-                                                                    }
-                                                                    /*=====================================FOOTER/**/
-                                                                    
-                                                                    footer {
-                                                                        background-color: #3b3b3b;
-                                                                        height: 500px;
-                                                                        display: flex;
-                                                                        z-index: 0s;
-                                                                    }
-                                                                    
-                                                                    footer * {
-                                                                        color: white;
-                                                                    }
-                                                                    
-                                                                    #social-media {
-                                                                        display: none;
-                                                                        position: fixed;
-                                                                        top: 35%;
-                                                                        list-style: none;
-                                                                        padding: 0;
-                                                                        z-index: 10;
-                                                                    }
-                                                                    
-                                                                    #social-media li {
-                                                                        cursor: pointer;
-                                                                        display: flex;
-                                                                        width: 50px;
-                                                                    }
-                                                                    
-                                                                    #social-media li:nth-child(6) a {
-                                                                        background-color: #d95232;
-                                                                    }
-                                                                    
-                                                                    #social-media li:nth-child(5) a {
-                                                                        background-color: rgb(70, 189, 100);
-                                                                    }
-                                                                    
-                                                                    #social-media li:nth-child(3) a {
-                                                                        background-color: #38b3e4;
-                                                                    }
-                                                                    
-                                                                    #social-media li:nth-child(2) a {
-                                                                        background-color: #0e76a8;
-                                                                    }
-                                                                    
-                                                                    ul li:nth-child(7) a {
-                                                                        background-color: #c52b33;
-                                                                    }
-                                                                    
-                                                                    #social-media li:nth-child(1) a {
-                                                                        background-color: #3b5998;
-                                                                    }
-                                                                    
-                                                                    #social-media li:nth-child(4) a {
-                                                                        background-color: #ffe600;
-                                                                    }
-                                                                    
-                                                                    #social-media li a {
-                                                                        padding: 10px;
-                                                                        cursor: pointer;
-                                                                        color: white;
-                                                                        display: flex;
-                                                                        align-items: center;
-                                                                        transition: all .5s;
-                                                                        width: 30px;
-                                                                        box-shadow: 7px 10px 10px 0px rgb(90, 90, 90);
-                                                                    }
-                                                                    
-                                                                    #social-media li:hover,
-                                                                    #social-media li:hover a {
-                                                                        width: 180px;
-                                                                    }
-                                                                    
-                                                                    #social-media li a span {
-                                                                        position: relative;
-                                                                        opacity: 0;
-                                                                        text-transform: capitalize;
-                                                                        margin-left: 20px;
-                                                                        color: white;
-                                                                        transform: translate(-200px);
-                                                                    }
-                                                                    
-                                                                    #social-media li a:hover span {
-                                                                        opacity: 1;
-                                                                        transform: translate(0%);
-                                                                    }
-                                                                    
-                                                                    #social-media li:hover {
-                                                                        box-shadow: 7px 10px 10px 0px rgb(90, 90, 90);
-                                                                    }
-                                                                    
-                                                                    #social-media li img {
-                                                                        z-index: 1;
-                                                                        width: 30px;
-                                                                    }
-                                                                    
-                                                                    #contacto {
-                                                                        flex-basis: 50%;
-                                                                        display: flex;
-                                                                        flex-direction: row;
-                                                                        justify-content: center;
-                                                                        margin-left: 50px;
-                                                                    }
-                                                                    
-                                                                    #movil,
-                                                                    #horarios,
-                                                                    #telefonos,
-                                                                    #location {
-                                                                        margin-top: 40px;
-                                                                        display: flex;
-                                                                        flex-direction: column;
-                                                                        flex-grow: 1;
-                                                                        align-items: center;
-                                                                    }
-                                                                    
-                                                                    #movil ul li,
-                                                                    #horarios ul li,
-                                                                    #telefonos ul li {
-                                                                        cursor: pointer;
-                                                                        transition: 0.1s;
-                                                                    }
-                                                                    
-                                                                    #movil ul li:hover,
-                                                                    #horarios ul li:hover,
-                                                                    #telefonos ul li:hover {
-                                                                        text-decoration: underline;
-                                                                    }
-                                                                    
-                                                                    #contacto ul {
-                                                                        list-style: none;
-                                                                    }
-                                                                    
-                                                                    #contacto ul li {
-                                                                        font-size: 17px;
-                                                                        line-height: 30px;
-                                                                    }
-                                                                    
-                                                                    .icon {
-                                                                        border: 1px solid;
-                                                                        width: 35px;
-                                                                        padding: 20px;
-                                                                        background-color: #f0f0f0;
-                                                                        border-radius: 50%;
-                                                                        cursor: pointer;
-                                                                        transition: 0.2s;
-                                                                    }
-                                                                    
-                                                                    .icon:hover {
-                                                                        background-color: var(--main-Color);
-                                                                        color: var(--main-Color);
-                                                                    }
-                                                                    
-                                                                    #form {
-                                                                        display: flex;
-                                                                        flex-basis: 49%;
-                                                                        flex-direction: column;
-                                                                        align-items: center;
-                                                                    }
-                                                                    
-                                                                    #form input,
-                                                                    textarea {
-                                                                        color: #888888;
-                                                                        border: none;
-                                                                        min-width: 300px;
-                                                                        height: 35px;
-                                                                        outline: none;
-                                                                        margin-top: 15px;
-                                                                    }
-                                                                    
-                                                                    #form textarea {
-                                                                        min-height: 100px;
-                                                                    }
-                                                                    
-                                                                    #form input:focus,
-                                                                    textarea:focus {
-                                                                        box-shadow: 0px 0px 10px 1px #e7e7e7af;
-                                                                    }
-                                                                    
-                                                                    #form button {
-                                                                        margin-top: 10px;
-                                                                        color: #888888
-                                                                    }
-                                                                    
-                                                                    .mapa {
-                                                                        margin-left: 50px;
-                                                                        margin-top: 50px;
-                                                                    }
-                                                                    /*
+
+.out-right {
+transform: translate(200%);
+}
+
+.out-left {
+transform: translate(-200%);
+}
+
+#section5 {
+min-height: 800px;
+background-color: var(--main-Color);
+text-align: center;
+display: block;
+}
+
+#section5 p {
+margin: 0px auto;
+line-height: 35px;
+width: calc(50% + (155px));
+margin-top: 30px;
+}
+
+#steps {
+margin-top: 70px;
+counter-reset: steps;
+margin-left: 20%;
+margin-right: 20%;
+}
+
+#steps div {
+padding: 0px auto;
+}
+
+#steps hr {
+/*width: calc(100% - 10% - 50px);*/
+top: 25px;
+margin: 0;
+margin-left: 67px;
+position: relative;
+z-index: 0;
+transition: width 3s linear;
+border-color: var(--title-font-color)
+/*animation-name: crecer;
+animation-duration: 3s;
+animation-timing-function: linear;*/
+}
+
+#steps ul {
+padding-inline-start: 0px;
+list-style: none;
+display: flex;
+}
+
+#steps li {
+display: inline;
+margin: 0px 14% 0px 14%;
+z-index: 1;
+color: var(--title-font-color);
+transform: all .3s;
+}
+
+#steps li:nth-child(1) {
+margin: 0px 10% 0px 0%;
+z-index: 1;
+}
+
+#steps li:nth-child(2) {}
+
+#steps li:nth-child(3) {}
+
+#steps li:nth-child(4) {
+margin: 0px 0% 0px 10%;
+z-index: 1;
+color: white;
+}
+
+#steps li:before {
+background-color: var(--tertary-color);
+color: var(--title-font-color);
+border: 2px solid;
+z-index: 1;
+content: counter(steps);
+counter-increment: steps;
+padding: 25px 30px 25px 30px;
+border-radius: 50%;
+height: 30px;
+width: 50px;
+}
+
+#steps li::after {
+color: var(--title-font-color);
+display: block;
+width: 50px;
+text-align: center;
+margin-top: 30px;
+font-weight: bold;
+}
+
+#steps li:nth-child(1):after {
+content: 'Diagnóstico';
+}
+
+#steps li:nth-child(2):after {
+content: 'Objetivos';
+}
+
+#steps li:nth-child(3):after {
+content: 'Planificación';
+}
+
+#steps li:nth-child(4):after {
+content: 'Ejecución';
+}
+/*------------------------------------------------ our-customers */
+
+#our-customers {
+min-height: 175px;
+background-image: url('./images/customers/bg2.png');
+background-blend-mode: difference;
+background-attachment: fixed;
+}
+
+#our-customers div {
+overflow-x: scroll;
+scroll-behavior: smooth;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+backdrop-filter: blur(5px);
+min-height: 175px;
+background-color: rgba(255, 255, 255, 0.6);
+}
+
+#our-customers div::-webkit-scrollbar {
+display: none;
+}
+
+#our-customers div img {
+filter: grayscale(1);
+margin: 0px 45px 0px 45px;
+}
+
+#our-customers div img:hover {
+filter: none;
+}
+/*=====================================FOOTER/**/
+
+footer {
+background-color: #3b3b3b;
+height: 500px;
+display: flex;
+z-index: 0s;
+}
+
+footer * {
+color: white;
+}
+
+footer #redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+footer #redes div{
+    margin: 0px 25px 0px 25px;
+}
+#facebook img{
+    background-color: #3b5998;
+}
+
+#instagram img{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+     }
+#social-media {
+display: none;
+position: fixed;
+top: 35%;
+list-style: none;
+padding: 0;
+z-index: 10;
+}
+
+#social-media li {
+cursor: pointer;
+display: flex;
+width: 50px;
+}
+
+#social-media li:nth-child(6) a {
+background-color: #d95232;
+}
+
+#social-media li:nth-child(5) a {
+background-color: rgb(70, 189, 100);
+}
+
+#social-media li:nth-child(3) a {
+background-color: #38b3e4;
+}
+
+#social-media li:nth-child(2) a {
+background-color: #0e76a8;
+}
+
+ul li:nth-child(7) a {
+background-color: #c52b33;
+}
+
+#social-media li:nth-child(1) a {
+background-color: #3b5998;
+}
+
+#social-media li:nth-child(4) a {
+background-color: #ffe600;
+}
+
+#social-media li a {
+padding: 10px;
+cursor: pointer;
+color: white;
+display: flex;
+align-items: center;
+transition: all .5s;
+width: 30px;
+box-shadow: 7px 10px 10px 0px rgb(90, 90, 90);
+}
+
+#social-media li:hover,
+#social-media li:hover a {
+width: 180px;
+}
+
+#social-media li a span {
+position: relative;
+opacity: 0;
+text-transform: capitalize;
+margin-left: 20px;
+color: white;
+transform: translate(-200px);
+}
+
+#social-media li a:hover span {
+opacity: 1;
+transform: translate(0%);
+}
+
+#social-media li:hover {
+box-shadow: 7px 10px 10px 0px rgb(90, 90, 90);
+}
+
+#social-media li img {
+z-index: 1;
+width: 30px;
+}
+
+#contacto {
+flex-basis: 50%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-left: 50px;
+}
+
+#movil,
+#horarios,
+#telefonos,
+#location {
+margin-top: 40px;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+align-items: center;
+}
+
+#movil ul li,
+#horarios ul li,
+#telefonos ul li {
+cursor: pointer;
+transition: 0.1s;
+}
+
+#movil ul li:hover,
+#horarios ul li:hover,
+#telefonos ul li:hover {
+text-decoration: underline;
+}
+
+#contacto ul {
+list-style: none;
+}
+
+#contacto ul li {
+font-size: 17px;
+line-height: 30px;
+}
+
+.icon {
+border: 1px solid;
+width: 35px;
+padding: 20px;
+background-color: #f0f0f0;
+border-radius: 50%;
+cursor: pointer;
+transition: 0.2s;
+}
+
+.icon:hover {
+background-color: var(--main-Color);
+color: var(--main-Color);
+}
+
+#form {
+display: flex;
+flex-basis: 49%;
+flex-direction: column;
+align-items: center;
+}
+
+#form input,
+textarea {
+color: #888888;
+border: none;
+min-width: 300px;
+height: 35px;
+outline: none;
+margin-top: 15px;
+}
+
+#form textarea {
+min-height: 100px;
+}
+
+#form input:focus,
+textarea:focus {
+box-shadow: 0px 0px 10px 1px #e7e7e7af;
+}
+
+#form button {
+margin-top: 10px;
+color: #888888
+}
+
+.mapa {
+margin-left: 50px;
+margin-top: 50px;
+}
+/*
 #section2 img:nth-child(1){
-    
-    animation-delay: 1s;
+
+animation-delay: 1s;
 }
 #section2 img:nth-child(2){
-    animation-delay: 0.5s;
+animation-delay: 0.5s;
 }*/
-                                                                    
-                                                                    @keyframes imgEntrada {
-                                                                        from {
-                                                                            top: -75%;
-                                                                        }
-                                                                        to {
-                                                                            top: 0%;
-                                                                        }
-                                                                    }
-                                                                    
-                                                                    .center span {
-                                                                        letter-spacing: 2px;
-                                                                        color: white
-                                                                    }
-                                                                    
-                                                                    .center {
-                                                                        display: none;
-                                                                        /*display: flex;/*/
-                                                                        text-align: center;
-                                                                        justify-content: center;
-                                                                        align-items: center;
-                                                                        min-height: 200px;
-                                                                        background-color: rgb(24, 22, 22);
-                                                                    }
-                                                                    
-                                                                    .rings {
-                                                                        position: absolute;
-                                                                        width: 150px;
-                                                                        height: 150px;
-                                                                        border-radius: 50%;
-                                                                        animation: ring 1s linear infinite
-                                                                    }
-                                                                    
-                                                                    .rings::before {
-                                                                        height: 100%;
-                                                                        width: 100%;
-                                                                        border-radius: 50%;
-                                                                    }
-                                                                    /*
+
+@keyframes imgEntrada {
+from {
+top: -75%;
+}
+to {
+top: 0%;
+}
+}
+
+.center span {
+letter-spacing: 2px;
+color: white
+}
+
+.center {
+display: none;
+/*display: flex;/*/
+text-align: center;
+justify-content: center;
+align-items: center;
+min-height: 200px;
+background-color: rgb(24, 22, 22);
+}
+
+.rings {
+position: absolute;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+animation: ring 1s linear infinite
+}
+
+.rings::before {
+height: 100%;
+width: 100%;
+border-radius: 50%;
+}
+/*
 @keyframes ring{
-    0%{
-        box-shadow: 0px 0px 20px 0px #ccc
-    }
-    25%{
-        
-        box-shadow: 0px 0px 20px 13px #ccc
-    }
-    50%{
-        
-        box-shadow: 0px 0px 20px 25px #ccc
-    }
-    75%{
-        
-        box-shadow: 0px 0px 20px 13px #ccc
-    }
-    100%{
-        
-        box-shadow: 0px 0px 20px 0px #ccc
-    }
-  
+0%{
+box-shadow: 0px 0px 20px 0px #ccc
+}
+25%{
+
+box-shadow: 0px 0px 20px 13px #ccc
+}
+50%{
+
+box-shadow: 0px 0px 20px 25px #ccc
+}
+75%{
+
+box-shadow: 0px 0px 20px 13px #ccc
+}
+100%{
+
+box-shadow: 0px 0px 20px 0px #ccc
+}
+
 }
 */
-                                                                    
-                                                                    @keyframes ring {
-                                                                        0% {
-                                                                            transform: rotate(0deg);
-                                                                            box-shadow: 2px 5px 1px rgba(255, 0, 0, 0.8)
-                                                                        }
-                                                                        25% {
-                                                                            transform: rotate(90deg);
-                                                                            box-shadow: 2px 5px 2px rgba(255, 153, 0, 0.8)
-                                                                        }
-                                                                        50% {
-                                                                            transform: rotate(180deg);
-                                                                            box-shadow: 2px 5px 3px rgba(255, 238, 0, 0.8)
-                                                                        }
-                                                                        75% {
-                                                                            transform: rotate(270deg);
-                                                                            box-shadow: 2px 5px 2px rgba(255, 153, 0, 0.8)
-                                                                        }
-                                                                        100% {
-                                                                            transform: rotate(360deg);
-                                                                            box-shadow: 2px 5px 1px rgba(255, 0, 0, 0.8)
-                                                                        }
-                                                                    }
-                                                                    
-                                                                    @media (max-width:894px) {
-                                                                        nav {
-                                                                            margin-top: 70px;
-                                                                            background-color: rebeccapurple;
-                                                                            position: absolute;
-                                                                            display: flex;
-                                                                            justify-content: center;
-                                                                            align-items: center;
-                                                                            height: calc(100% - 77px);
-                                                                            width: 100%;
-                                                                            left: -100%;
-                                                                            transition: all 0.5s;
-                                                                        }
-                                                                        nav ul {
-                                                                            flex-direction: column;
-                                                                        }
-                                                                        nav ul li a {
-                                                                            text-transform: uppercase;
-                                                                        }
-                                                                        #menuIcon {
-                                                                            display: inline;
-                                                                        }
-                                                                        #menuIcon img {
-                                                                            width: 55px;
-                                                                        }
-                                                                        #check:checked nav {
-                                                                            display: none;
-                                                                        }
-                                                                        #check:checked~nav {
-                                                                            left: 0%;
-                                                                            transition: all 0.5s;
-                                                                        }
-                                                                        #menuIcon {
-                                                                            box-shadow: 0px 0px 10px rgb(235, 235, 235);
-                                                                            border-radius: 15px;
-                                                                        }
-                                                                        #menuIcon:active {
-                                                                            box-shadow: 0px 0px 10px rgb(235, 235, 235) inset;
-                                                                        }
-                                                                    }
-                                                                    
-                                                                    .width-0 {
-                                                                        width: 0%;
-                                                                    }
-                                                                    
-                                                                    .widthhr {
-                                                                        width: calc(76% + (220px) - 72px);
-                                                                    }
-                                                                    
-                                                                    @keyframes rodar {
-                                                                        to {
-                                                                            transform: rotate(360deg);
-                                                                        }
-                                                                    }
-                                                                    
-                                                                    @keyframes crecer {
-                                                                        from {
-                                                                            width: 0%;
-                                                                        }
-                                                                        to {
-                                                                            width: calc(76% + (220px) - 72px);
-                                                                        }
+
+@keyframes ring {
+0% {
+transform: rotate(0deg);
+box-shadow: 2px 5px 1px rgba(255, 0, 0, 0.8)
+}
+25% {
+transform: rotate(90deg);
+box-shadow: 2px 5px 2px rgba(255, 153, 0, 0.8)
+}
+50% {
+transform: rotate(180deg);
+box-shadow: 2px 5px 3px rgba(255, 238, 0, 0.8)
+}
+75% {
+transform: rotate(270deg);
+box-shadow: 2px 5px 2px rgba(255, 153, 0, 0.8)
+}
+100% {
+transform: rotate(360deg);
+box-shadow: 2px 5px 1px rgba(255, 0, 0, 0.8)
+}
+}
+
+@media (max-width:894px) {
+nav {
+margin-top: 70px;
+background-color: rebeccapurple;
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+height: calc(100% - 77px);
+width: 100%;
+left: -100%;
+transition: all 0.5s;
+}
+nav ul {
+flex-direction: column;
+}
+nav ul li a {
+text-transform: uppercase;
+}
+#menuIcon {
+display: inline;
+}
+#menuIcon img {
+width: 55px;
+}
+#check:checked nav {
+display: none;
+}
+#check:checked~nav {
+left: 0%;
+transition: all 0.5s;
+}
+#menuIcon {
+box-shadow: 0px 0px 10px rgb(235, 235, 235);
+border-radius: 15px;
+}
+#menuIcon:active {
+box-shadow: 0px 0px 10px rgb(235, 235, 235) inset;
+}
+}
+
+.width-0 {
+width: 0%;
+}
+
+.widthhr {
+width: calc(76% + (220px) - 72px);
+}
+
+@keyframes rodar {
+to {
+transform: rotate(360deg);
+}
+}
+
+@keyframes crecer {
+from {
+width: 0%;
+}
+to {
+width: calc(76% + (220px) - 72px);
+}

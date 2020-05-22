@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var index = 1;
     setActive('navInicio', 'inicio');
     setInterval(a => {
-        changeBanner(index);
+        //changeBanner(index);
         //        changeCompanyImg(index)
         index++;
         if (index > 2) {
@@ -86,7 +86,7 @@ window.onscroll = function() {
     if (window.scrollY >= 2000) {
         setAnimation(4);
     }
-    if (window.scrollY >= 2700) {
+    if (window.scrollY >= 3000) {
         setAnimation(5);
     }
 };
