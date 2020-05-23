@@ -490,6 +490,9 @@ max-height: 185;
 overflow: hidden;
 }
 
+#section4 .card ul{
+}
+
 #section4 .card li{
     margin-top: 10px;
     line-height: 25px;

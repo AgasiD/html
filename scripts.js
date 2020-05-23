@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function setActive(name) {
     var menuItems = [document.getElementById('navInicio'), document.getElementById('navTienda'), document.getElementById('navContacto'), document.getElementById('navSobre')]
-    console.log('Set active', menuItems)
     menuItems.forEach(item => {
         item.className = '';
     });
@@ -31,7 +30,6 @@ function setActive(name) {
 function movCustomers() {
     var div = document.getElementById('customers');
     div.scrollLeft += div.offsetWidth * 0.2;
-    console.log(div.scrollLeft, div.offsetWidth)
     if (div.scrollLeft >= div.offsetWidth) {
         div.scrollLeft = 0;
     }
@@ -59,7 +57,7 @@ function changeBanner(index) {
 
 window.onscroll = function() {
     console.log("Vertical: " + window.scrollY);
-    console.log("Horizontal: " + window.scrollX);
+  
     var sectionSize = 800;
 
     if (window.scrollY < sectionSize - 100) {
@@ -83,9 +81,10 @@ window.onscroll = function() {
     if (window.scrollY >= 1500) {
         setAnimation(3);
     }
-    if (window.scrollY >= 2000) {
+    if (window.scrollY >= 2400) {
         setAnimation(4);
     }
+    
     if (window.scrollY >= 3000) {
         setAnimation(5);
     }
@@ -123,28 +122,17 @@ function setAnimation(section) {
             var t2 = document.getElementById('text2');
             t2.className = '';
             break;
-            // case 4:
-            //     var li1 = document.getElementById('lii1'),
-            //     li2 = document.getElementById('lii2'),
-            //     li3 = document.getElementById('li12'),
-            //     li4 = document.getElementById('lii4'),
-            //     li5 = document.getElementById('lii5'),
-            //     li6 = document.getElementById('lii6');
-            //     li1.style = 'transform: translate(0%)';
-            //     setTimeout(() => {
-            //         li2.style = 'transform: translate(5%)';
-            //     }, 500);
-            //     setTimeout(() => {
-            //         li4.style = 'transform: translate(10%)';
-            //     }, 1000);
-            //     setTimeout(() => {;
-            //         li5.style = 'transform: translate(15%)';
-            //     }, 1500);
-            //     setTimeout(() => {;
-            //         li6.style = 'transform: translate(20%)';
-            //     }, 2000);
-            //     break;
-
+         case 4:
+        var ul1 = document.getElementById('ul-card-1'),
+         ul2= document.getElementById('ul-card-2'),
+         ul3= document.getElementById('ul-card-3'),
+         ul4= document.getElementById('ul-card-4'),
+         ul5= document.getElementById('ul-card-5');
+        ul1.style = '';
+        ul2.style = '';
+        ul3.style = '';
+        ul4.style = '';
+        ul5.style = '';
 
         case 3:
             var t2 = document.getElementById('text2');
