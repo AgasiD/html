@@ -14,7 +14,7 @@
 * {
 transition: all 0.5s;
 font-family: 'Quicksand', sans-serif;
-font-weight: bold;
+font-weight: 500;
 color: var(--main-font-Color);
 }
 
@@ -490,10 +490,14 @@ max-height: 185;
 overflow: hidden;
 }
 
+#section4 .card li{
+    margin-top: 10px;
+    line-height: 25px;
+    text-align: start;
+}
 #section4 .card p {
 z-index: 1;
 transition: all 0.5s;
-opacity: 0;
 }
 
 #section4 .card:hover {
