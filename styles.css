@@ -49,13 +49,13 @@ text-decoration: none;
 }
 
 header {
-background-color: var(--tertary-color);
-display: flex;
-position: fixed;
-width: 100%;
-box-shadow: 1px 1px 25px 2px black;
-z-index: 10;
-animation: fadeIn .5s linear;
+    background-color: var(--tertary-color);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    box-shadow: 1px 1px 25px 2px black;
+    z-index: 10;
+    animation: fadeIn .5s linear;
 }
 
 @keyframes fadeIn {
@@ -68,7 +68,7 @@ opacity: 1;
 }
 
 header #logo {
-flex-basis: 50%;
+flex-basis: 60%;
 margin-left: 20px;
 }
 
@@ -230,45 +230,83 @@ left: 0%;
 
 #section1 article h1,
 #section1 article p {
+    display: inline;
 position: relative;
 text-align: center;
 width: 30%;
 animation: entrar1 1s ease;
 }
 
-#section1 article h1 {
-font-size: 45px;
-color: var(--title-font-color) !important;
+
+#section1 article h1, #section1 article h1 p {
+    font-family: 'Source Sans Pro', sans-serif;/*font-family: 'Roboto Condensed', sans-serif;/*font-family: 'Bebas Neue', cursive;/*font-family: 'Archivo Black', sans-serif;*/
+    font-size: 65px;
+    color: rgb(248, 0, 0) !important;
+    transition: all 0.2s;
 }
+#section1 article h1 p::before{
+    
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out 0s;
+    border-bottom: 3px solid red;
+    animation: subrayar 2s linear; 
+    
+}
+
+#section1 article h1 p:hover::before{
+  }
+
+@keyframes subrayar{
+    0%{
+        transform: scaleX(0);
+    }
+    50%{
+        transform: scaleX(0);
+
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+
 
 #section1 article p {
 color: rgb(218, 218, 218) !important;
 }
 
-#section1 article button,
-#form button {
-position: relative;
-width: 25%;
-height: 50px;
-cursor: pointer;
-outline: none;
-border: none;
-border-radius: 10px;
-margin: 50px 15px 0px 15px;
-animation: entrar1 1s ease;
+#section1 article a,
+#form a {
+    text-align: center;
+    line-height: 45px;
+    position: relative;
+    width: 25%;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin: 50px 15px 0px 15px;
+    animation: entrar1 1s ease;
+    background-color: rgb(122, 122, 122);
 }
 
-#section1 article button:hover,
-#form button:hover {
-background-color: var(--main-Color);
-box-shadow: 0px 0px 10px 10px var(--main-Color);
+#section1 article a:hover,
+#form a:hover {
+background-color: var(--title-font-color);
+box-shadow: 0px 0px 10px 10px var(--title-font-color);
 }
 
-#section1 article button:active,
-#form button:active {
+#section1 article a:active,
+#form a:active {
 transition: 0.1s;
-background-color: var(--main-Color);
-box-shadow: 0px 0px 10px 10px #888888;
+background-color: var(--title-font-color);
+box-shadow: 0px 0px 10px 10px inset var(--title-font-color);
 }
 
 @keyframes entrar1 {
@@ -481,7 +519,6 @@ width: 70%;
 }
 
 #section4 .card {
-cursor: pointer;
 transition: 1s;
 text-align: center;
 border-radius: 10px;
@@ -491,6 +528,7 @@ overflow: hidden;
 }
 
 #section4 .card ul{
+    transition: all .5s;
 }
 
 #section4 .card li{
@@ -642,7 +680,8 @@ margin-left: 67px;
 position: relative;
 z-index: 0;
 transition: width 3s linear;
-border-color: var(--title-font-color)
+border-color: var(--title-font-color);
+border-width: 2.5px;
 /*animation-name: crecer;
 animation-duration: 3s;
 animation-timing-function: linear;*/
@@ -655,16 +694,16 @@ display: flex;
 }
 
 #steps li {
-display: inline;
-margin: 0px 14% 0px 14%;
-z-index: 1;
-color: var(--title-font-color);
-transform: all .3s;
+    display: inline;
+    margin: 0px 14% 0px 14%;
+    z-index: 1;
+    color: var(--title-font-color);
+    transform: all .3s;
 }
 
 #steps li:nth-child(1) {
-margin: 0px 10% 0px 0%;
-z-index: 1;
+    margin: 0px 10% 0px 0%;
+    z-index: 1;
 }
 
 #steps li:nth-child(2) {}
@@ -678,16 +717,16 @@ color: white;
 }
 
 #steps li:before {
-background-color: var(--tertary-color);
-color: var(--title-font-color);
-border: 2px solid;
-z-index: 1;
-content: counter(steps);
-counter-increment: steps;
-padding: 25px 30px 25px 30px;
-border-radius: 50%;
-height: 30px;
-width: 50px;
+    background-color: var(--tertary-color);
+    color: var(--title-font-color);
+    border: 2.5px solid;
+    z-index: 1;
+    content: counter(steps);
+    counter-increment: steps;
+    padding: 25px 30px 25px 30px;
+    border-radius: 50%;
+    height: 30px;
+    width: 50px;
 }
 
 #steps li::after {
@@ -769,10 +808,12 @@ footer #redes div{
     margin: 0px 25px 0px 25px;
 }
 #facebook img{
+    
     background-color: #3b5998;
 }
 
 #instagram img{
+    
     background: #f09433; 
     background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
     background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 

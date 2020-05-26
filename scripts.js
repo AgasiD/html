@@ -81,7 +81,7 @@ window.onscroll = function() {
     if (window.scrollY >= 1500) {
         setAnimation(3);
     }
-    if (window.scrollY >= 2400) {
+    if (window.scrollY >= 2500) {
         setAnimation(4);
     }
     
